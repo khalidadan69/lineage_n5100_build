@@ -1,0 +1,12 @@
+    - name: Add local manifest for n5100
+      run: |
+        mkdir -p ~/android/lineage/.repo/local_manifests
+        cat > ~/android/lineage/.repo/local_manifests/n5100.xml << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="html6405/android_device_samsung_n5100" path="device/samsung/n5100" remote="github" revision="lineage-18.1" />
+  <project name="html6405/android_device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" remote="github" revision="lineage-18.1" />
+  <project name="html6405/android_kernel_samsung_smdk4412" path="kernel/samsung/smdk4412" remote="github" revision="lineage-18.1" />
+  <project name="html6405/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-18.1" />
+</manifest>
+EOF
